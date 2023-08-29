@@ -17,7 +17,7 @@ public class BilgeLogInTest extends BilgeBaseDriver{
         BilgeFunc.Bekle(2);
 
         WebElement loginIcon = driver.findElement(By.xpath("(//ul/li[2]/a)[1]"));
-        wait.until(ExpectedConditions.elementToBeClickable(loginIcon));
+        wait.until(ExpectedConditions.elementToBeClickable(loginIcon)); // login iconuna tıklanabilir olana kadar bekle
         loginIcon.click();
         BilgeFunc.Bekle(2);
 
