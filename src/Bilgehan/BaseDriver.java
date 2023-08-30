@@ -8,7 +8,7 @@ import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class BilgeBaseDriver {
+public class BaseDriver {
     public static WebDriver driver; // SingletonDriver method
     public static WebDriverWait wait;
 
@@ -25,7 +25,7 @@ public class BilgeBaseDriver {
     }
 
     public static void BekleVeKapat(){
-        BilgeFunc.Bekle(5);
+        MyFunc.Bekle(5);
         driver.quit();
     }
 }
