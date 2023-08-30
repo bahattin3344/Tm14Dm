@@ -45,6 +45,8 @@ public class MasterClass extends BaseDriver{
         girisBtn.click();
         MyFunction.wait(2);
 
+
+        // Anket Bulundu
         WebElement anket=driver.findElement(By.cssSelector("[id='pollanswers-1']"));
         anket.click();
         MyFunction.wait(2);
