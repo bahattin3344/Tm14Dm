@@ -4,12 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-public class SiparisVerme extends BaseDriver {
+public class SiparisOlusturma extends BilgeBaseDriver {
     @Test
     public void SiparisVerme(){
         driver.get("https://demowebshop.tricentis.com/");
@@ -27,7 +26,7 @@ public class SiparisVerme extends BaseDriver {
         WebElement girisBtn=driver.findElement(By.cssSelector("[class='button-1 login-button']"));
         girisBtn.click(); // login butonuna bastık
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement addToCartBut = driver.findElement(By.xpath("(//input[@class = 'button-2 product-box-add-to-cart-button'])[2]"));
         addToCartBut.click(); // herhangi bir ürünü seçip sepete ekledik
@@ -35,7 +34,7 @@ public class SiparisVerme extends BaseDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
         // işlem başarılı yazısı görünene kadar bekledik
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
@@ -43,7 +42,7 @@ public class SiparisVerme extends BaseDriver {
         js.executeScript("window.scrollTo(0, 0);");
         shoppingCartButton.click();
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement sepettekiUrun = driver.findElement(By.xpath("//a[@class='product-name']"));
         Assert.assertTrue("Ürün bulunamadı...", sepettekiUrun.getText().equals("14.1-inch Laptop"));
@@ -60,12 +59,12 @@ public class SiparisVerme extends BaseDriver {
         WebElement zipCodeText = driver.findElement(By.id("ZipPostalCode")); // posta kodu locator
         zipCodeText.sendKeys("42100");
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement estShipBut = driver.findElement(By.name("estimateshipping")); // est shipping butonu
         estShipBut.click();
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement ground = driver.findElement(By.xpath("(//strong[@class='option-name'])[1]"));
         Assert.assertTrue("Kargolama görüntülenemedi...", ground.getText().contains("Ground")); // kargo seçeneği kontrolü
@@ -76,7 +75,7 @@ public class SiparisVerme extends BaseDriver {
         WebElement checkOutBut = driver.findElement(By.cssSelector("[class='button-1 checkout-button']"));
         checkOutBut.click();
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement selectMenu5 = driver.findElement(By.id("billing-address-select"));
         Select newAddress = new Select(selectMenu5);
@@ -136,7 +135,7 @@ public class SiparisVerme extends BaseDriver {
         WebElement continueButton5 = driver.findElement(By.cssSelector("[onclick='ConfirmOrder.save()']"));
         continueButton5.click();
 
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement basariliOdeme = driver.findElement(By.xpath("//div/strong"));
         Assert.assertTrue("Sipariş oluşturulamadı...", basariliOdeme.getText().contains("successfully"));

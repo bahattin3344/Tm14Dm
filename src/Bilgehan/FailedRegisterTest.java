@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class FailedRegisterTest extends BaseDriver {
+public class FailedRegisterTest extends BilgeBaseDriver {
 
     @Test
     public void Test1(){
@@ -16,37 +16,37 @@ public class FailedRegisterTest extends BaseDriver {
         radio button seçimimiz boş kalacak.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i doldurduk.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i doldurduk.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email"));
         emailTxtBox.sendKeys("mustafakkedi@gmail.com");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password"));
         passwordTxtBox.sendKeys("Beyazkedi1.");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword"));
         confirmPassTxtBox.sendKeys("Beyazkedi1.");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         // Test failed cinsiyet seçimi zorunlu değil cinsiyet seçimi yapmadan da üyeliği tamamlıyor
 
@@ -60,42 +60,42 @@ public class FailedRegisterTest extends BaseDriver {
         text box unu boş kalacak şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys(""); // first name i boş bırakıyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i doldurduk.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail dolduruyoruz
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("Beyazkedi1."); // passwordu kurallara uygun girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("Beyazkedi1."); // aynı password u tekrarladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameError = driver.findElement(By.xpath("//span[text()='First name is required.']"));
         wait.until(ExpectedConditions.visibilityOf(firstNameError));
@@ -113,42 +113,42 @@ public class FailedRegisterTest extends BaseDriver {
         text box unu boş kalacak şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys(""); // last name i boş bırakıyorum.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail dolduruyoruz
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("Beyazkedi1."); // passwordu kurallara uygun girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("Beyazkedi1."); // aynı password u tekrarladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameError = driver.findElement(By.xpath("//span[text()='Last name is required.']"));
         wait.until(ExpectedConditions.visibilityOf(lastNameError));
@@ -165,42 +165,42 @@ public class FailedRegisterTest extends BaseDriver {
         text box unu boş kalacak şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys(""); // e-Mail boş bırakıyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("Beyazkedi1."); // passwordu kurallara uygun girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("Beyazkedi1."); // aynı password u tekrarladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailError = driver.findElement(By.xpath("//span[text()='Email is required.']"));
         wait.until(ExpectedConditions.visibilityOf(emailError));
@@ -217,42 +217,42 @@ public class FailedRegisterTest extends BaseDriver {
         text box unu boş kalacak şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys(""); // passwordu boş bıraktık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys(""); // confirm password boş bıraktık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordError = driver.findElement(By.xpath("(//span[text()='Password is required.'])[1]"));
         wait.until(ExpectedConditions.visibilityOf(passwordError));
@@ -270,42 +270,42 @@ public class FailedRegisterTest extends BaseDriver {
         text box unu boş kalacak şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("123456"); // passwordu kurallara uygun girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys(""); // confirm password boş bıraktık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordError = driver.findElement(By.xpath("//span[text()='Password is required.']"));
         wait.until(ExpectedConditions.visibilityOf(passwordError));
@@ -323,42 +323,42 @@ public class FailedRegisterTest extends BaseDriver {
         girecek şekilde ayarlayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i boş bırakıyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail i giriyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("123456"); // passwordu kurallara uygun girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("1234567"); // confirm passwordu yanlış girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordError = driver.findElement(By.xpath("//span[text()='The password and confirmation password do not match.']"));
         wait.until(ExpectedConditions.visibilityOf(passwordError));
@@ -376,42 +376,42 @@ public class FailedRegisterTest extends BaseDriver {
         kurallara uygun şekilde ayarlamayıp kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i boş bırakıyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // e-Mail giriyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("12345"); // passwordu kurallara uygun girmedik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("12345"); // confirm passwordu girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordError = driver.findElement(By.xpath("//span[text()='The password should have at least 6 characters.']"));
         wait.until(ExpectedConditions.visibilityOf(passwordError));
@@ -429,42 +429,42 @@ public class FailedRegisterTest extends BaseDriver {
         bir email ile tekrar kullanıcı oluşturmayı deniyoruz.
          */
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton = driver.findElement(By.xpath("//a[@class='ico-register']")); // register locator
         wait.until(ExpectedConditions.elementToBeClickable(registerButton)); // tıklanabilir olana kadar bekle
         registerButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement genderMaleRadioButton = driver.findElement(By.xpath("//input[@id='gender-male']")); // gender Male locator
         wait.until(ExpectedConditions.elementToBeClickable(genderMaleRadioButton)); // tıklanabilir olana kadar bekle
         genderMaleRadioButton.click(); // tıkladık
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement firstNameTxtBox = driver.findElement(By.xpath("//input[@id='FirstName']")); // first name locator
         firstNameTxtBox.sendKeys("Metin"); // first name i boş bırakıyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement lastNameTxtBox = driver.findElement(By.xpath("//input[@id='LastName']")); // last name locator
         lastNameTxtBox.sendKeys("Karakedi"); // last name i dolduruyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailTxtBox = driver.findElement(By.cssSelector("#Email")); // e-Mail locator ı
         emailTxtBox.sendKeys("metinkkedi@gmail.com"); // daha önceki açtığımız hesapla kullanıcı oluşturmayı deniyoruz.
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement passwordTxtBox = driver.findElement(By.cssSelector("#Password")); // password locator ı
         passwordTxtBox.sendKeys("123456"); // passwordu kurallara uygun girmedik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement confirmPassTxtBox = driver.findElement(By.cssSelector("#ConfirmPassword")); // confirm password text box u
         confirmPassTxtBox.sendKeys("123456"); // confirm passwordu girdik
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement registerButton2 = driver.findElement(By.cssSelector("#register-button"));
         wait.until(ExpectedConditions.elementToBeClickable(registerButton2));
         registerButton2.click();
-        MyFunction.Bekle(2);
+        BilgeMyFunction.Bekle(2);
 
         WebElement emailAlrExst = driver.findElement(By.xpath("//ul/li[text()='The specified email already exists']"));
         wait.until(ExpectedConditions.visibilityOf(emailAlrExst));
