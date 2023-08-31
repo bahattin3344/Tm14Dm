@@ -25,7 +25,7 @@ public class BilgeBaseDriver {
     }
 
     public static void BekleVeKapat(){
-        BilgeMyFunction.Bekle(5);
+        BilgeFunc.Bekle(5);
         driver.quit();
     }
 }

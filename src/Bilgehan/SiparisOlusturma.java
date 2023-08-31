@@ -26,7 +26,7 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         WebElement girisBtn=driver.findElement(By.cssSelector("[class='button-1 login-button']"));
         girisBtn.click(); // login butonuna bastık
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement addToCartBut = driver.findElement(By.xpath("(//input[@class = 'button-2 product-box-add-to-cart-button'])[2]"));
         addToCartBut.click(); // herhangi bir ürünü seçip sepete ekledik
@@ -34,7 +34,7 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
         // işlem başarılı yazısı görünene kadar bekledik
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         JavascriptExecutor js=(JavascriptExecutor)driver;
 
@@ -42,7 +42,7 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         js.executeScript("window.scrollTo(0, 0);");
         shoppingCartButton.click();
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement sepettekiUrun = driver.findElement(By.xpath("//a[@class='product-name']"));
         Assert.assertTrue("Ürün bulunamadı...", sepettekiUrun.getText().equals("14.1-inch Laptop"));
@@ -59,12 +59,12 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         WebElement zipCodeText = driver.findElement(By.id("ZipPostalCode")); // posta kodu locator
         zipCodeText.sendKeys("42100");
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement estShipBut = driver.findElement(By.name("estimateshipping")); // est shipping butonu
         estShipBut.click();
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement ground = driver.findElement(By.xpath("(//strong[@class='option-name'])[1]"));
         Assert.assertTrue("Kargolama görüntülenemedi...", ground.getText().contains("Ground")); // kargo seçeneği kontrolü
@@ -75,7 +75,7 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         WebElement checkOutBut = driver.findElement(By.cssSelector("[class='button-1 checkout-button']"));
         checkOutBut.click();
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement selectMenu5 = driver.findElement(By.id("billing-address-select"));
         Select newAddress = new Select(selectMenu5);
@@ -135,7 +135,7 @@ public class SiparisOlusturma extends BilgeBaseDriver {
         WebElement continueButton5 = driver.findElement(By.cssSelector("[onclick='ConfirmOrder.save()']"));
         continueButton5.click();
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement basariliOdeme = driver.findElement(By.xpath("//div/strong"));
         Assert.assertTrue("Sipariş oluşturulamadı...", basariliOdeme.getText().contains("successfully"));

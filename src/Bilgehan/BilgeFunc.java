@@ -1,6 +1,6 @@
 package Bilgehan;
 
-public class BilgeMyFunction {
+public class BilgeFunc {
     public static void Bekle(int sn){
 
         try {

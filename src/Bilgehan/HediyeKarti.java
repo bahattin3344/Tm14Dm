@@ -29,18 +29,18 @@ public class HediyeKarti extends BilgeBaseDriver {
         WebElement girisBtn=driver.findElement(By.cssSelector("[class='button-1 login-button']"));
         girisBtn.click(); // login butonuna bastık
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement topMenuNotebooks = driver.findElement(By.xpath("//ul[@class='top-menu']/li[2]/a"));
         Action aksiyon = driverActions.moveToElement(topMenuNotebooks).build();
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
         aksiyon.perform();
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         WebElement notebooks = driver.findElement(By.xpath("//ul[@class='sublist firstLevel active']/li[2]/a"));
         notebooks.click();
 
-        BilgeMyFunction.Bekle(2);
+        BilgeFunc.Bekle(2);
 
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
