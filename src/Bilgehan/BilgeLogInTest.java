@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BilgeLogInTest extends BilgeBaseDriver{
+public class BilgeLogInTest extends BilgeBaseDriver {
     @Test
     public void Test1(){
         /*
