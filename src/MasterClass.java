@@ -22,7 +22,7 @@ public class MasterClass extends BaseDriver{
         WebElement secondName=driver.findElement(By.cssSelector("#LastName"));
         secondName.sendKeys("Aydın");
         WebElement email=driver.findElement(By.cssSelector("#Email"));
-        email.sendKeys("tecnostudy123@gmail.com");
+        email.sendKeys("tecnostudy5455@gmail.com");
         WebElement password=driver.findElement(By.cssSelector("#Password"));
         password.sendKeys("Denizan561");
         WebElement confirmps=driver.findElement(By.cssSelector("#ConfirmPassword"));
@@ -53,6 +53,23 @@ public class MasterClass extends BaseDriver{
         WebElement anketBtn=driver.findElement(By.cssSelector("[id='vote-poll-1']"));
         anketBtn.click();
         MyFunction.wait(2);
+
+        // Profile Giriş
+
+        WebElement profil=driver.findElement(By.cssSelector("[class='header-links']>ul>li>[class='account']"));
+        profil.click();
+        // orders Giriş
+        bekle.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class='active']")));
+        WebElement orders=driver.findElement(By.cssSelector("[class='active']"));
+        orders.click();
+        // Sipariş Özetine Giriş
+        bekle.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[value='Details']")));
+        WebElement details=driver.findElement(By.cssSelector("[value='Details']"));
+        details.click();
+        // Özeti İndirme
+        bekle.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class='button-2 pdf-order-button']")));
+        WebElement pdfBtn=driver.findElement(By.cssSelector("[class='button-2 pdf-order-button']"));
+        pdfBtn.click();
 
 
 
